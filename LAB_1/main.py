@@ -20,7 +20,8 @@ def caesar_cipher(text, shift, operation, alphabet):
 def caesar_cipher_extended(text, shift, key, operation, alphabet):
     key = remove_duplicates(key)
     modified_alphabet = rotate_left(remove_duplicates((key + alphabet).upper()), shift)
-
+    print('Modified alphabet')
+    print(modified_alphabet)
     return caesar_cipher(text, shift, operation, modified_alphabet)
 
 
@@ -42,8 +43,8 @@ def rotate_left(input_string, n):
 if __name__ == "__main__":
     alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     operations = ['encrypt', 'decrypt']
-    enc_mess = 'masd'
-    dec_mess = 'QBVF'
+    enc_mess = 'masdasdasasdqqqeqws'
+    dec_mess = 'QBVFBVFBVBVFUUUIUZV'
     key = 'cryptography'
-    print(caesar_cipher_extended(dec_mess, 2, key, operations[1], alphabet))
+    print(caesar_cipher_extended(enc_mess, 2, key, operations[0], alphabet))
 
