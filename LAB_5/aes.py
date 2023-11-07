@@ -5,7 +5,7 @@ import hashlib
 import random
 
 # Given prime p and base g
-p = 17# (your large prime number)
+p = 17
 g = 2  # or any other primitive root modulo p
 
 # Alice generates her private key a and computes her public value A
